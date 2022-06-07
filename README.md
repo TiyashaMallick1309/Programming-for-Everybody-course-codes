@@ -1,6 +1,6 @@
 # Python-courses-practice
 
-(1-5) : 
+Course 1 : 
 Programming for Everybody (Getting Started with Python)
 by University of Michigan
 
