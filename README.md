@@ -4,7 +4,7 @@ Course 1 :
 Programming for Everybody (Getting Started with Python)
 by University of Michigan
 
-(6- ) :
+Course 2 :
 Python Functions, Files, and Dictionaries
 by University of Michigan
 
