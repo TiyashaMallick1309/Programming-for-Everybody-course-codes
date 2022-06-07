@@ -8,3 +8,6 @@ Course 2 :
 Python Functions, Files, and Dictionaries
 by University of Michigan
 
+Course 3 :
+Using Python to Access Web Data
+by University of Michigan
