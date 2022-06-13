@@ -1,6 +1,7 @@
 import urllib.request
 import urllib.parse
 import urllib.error
+
 from bs4 import BeautifulSoup
 
 url = input("enter: ")
