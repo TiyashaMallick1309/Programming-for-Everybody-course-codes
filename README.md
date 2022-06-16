@@ -22,3 +22,6 @@ Course 5:
 Python Basics
 by University of Michigan
 
+Course 6:
+Data Collection and Processing with Python
+by University of Michigan
