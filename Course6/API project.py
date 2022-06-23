@@ -26,3 +26,11 @@ def get_related_titles(l):
             if k not in c:
                 c.append(k)
     return c
+
+def get_movie_data(m):
+    p={"t":m,"r":"json"}
+    base="http://www.omdbapi.com/"
+    s=requests_with_caching.get(base,params=p)
+    print(s.url)
+    s=s.json()
+    return s
