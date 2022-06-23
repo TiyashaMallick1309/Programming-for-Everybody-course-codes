@@ -16,3 +16,13 @@ def extract_movie_titles(d):
         #print(i)
         j+=[i['Name']]
     return j
+
+def get_related_titles(l):
+    a=list(map(get_movies_from_tastedive,l))
+    b=list(map(extract_movie_titles,a))
+    c=[]
+    for i in b:
+        for k in i:
+            if k not in c:
+                c.append(k)
+    return c
