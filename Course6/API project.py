@@ -31,6 +31,15 @@ def get_movie_data(m):
     p={"t":m,"r":"json"}
     base="http://www.omdbapi.com/"
     s=requests_with_caching.get(base,params=p)
-    print(s.url)
+    #print(s.url)
     s=s.json()
     return s
+
+def get_movie_rating(s):
+    t=s['Ratings']
+    for i in t:
+        if i['Source']=="Rotten Tomatoes":
+            y=int(i['Value'][:-1])
+            return(y)
+    return 0
+
