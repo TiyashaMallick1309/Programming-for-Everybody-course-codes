@@ -25,3 +25,7 @@ by University of Michigan
 Course 6:
 Data Collection and Processing with Python
 by University of Michigan
+
+Course 7:
+Python Classes and Inheritance
+University of Michigan
