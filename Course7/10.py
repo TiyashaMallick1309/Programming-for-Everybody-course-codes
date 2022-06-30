@@ -8,10 +8,16 @@ students = [('Timmy', 95, 'Will pass'), ('Martha', 70), ('Betty', 82, 'Will pass
 passing = {'Will pass': 0, 'Will not pass': 0}
 try:
     for tup in students:
-        if tup[-1] == 'Will pass':
+        if tup[2] == 'Will pass':
             passing['Will pass'] += 1
-        elif tup[-1] == 'Will not pass':
+        elif tup[2] == 'Will not pass':
             passing['Will not pass'] += 1
         
 except Exception as e:
     print(e)
+    passing = {'Will pass': 0, 'Will not pass': 0}
+    for tup in students:
+        if tup[-1] == 'Will pass':
+            passing['Will pass'] += 1
+        elif tup[-1] == 'Will not pass':
+            passing['Will not pass'] += 1
