@@ -1,4 +1,4 @@
-### WHEEL OF FORTUNE
+# WHEEL OF FORTUNE
 
 This project will take you through the process of implementing a simplified version of the game Wheel of Fortune. Here are the rules of our game:
 There are num_human human players and num_computer computer players.
@@ -41,11 +41,9 @@ for x in range(2, 6):
 print('Done!')
 ***
 The random module includes several useful methods for generating and using random numbers, including:
-
 random.randint(min, max) generates a random number between min and max (inclusive)
-
 random.choice(L) selects a random item from the list L
-
+***
 import random
 
 rand_number = random.randint(1, 10)
@@ -54,13 +52,11 @@ print('Random number between 1 and 10: {}'.format(rand_number))
 letters = [letter for letter in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ']
 rand_letter = random.choice(letters)
 print('Random letter: {}'.format(rand_letter))
-
+***
 There are also several string methods that we haven’t gone over in detail but will use for this project:
-
 .upper() converts a string to uppercase (the opposite is .lower())
-
 .count(s) counts how many times the string s occurs inside of a larger string
-
+***
 myString = 'Hello, World! 123'
 
 print(myString.upper()) # HELLO, WORLD! 123
@@ -69,19 +65,14 @@ print(myString.count('l')) # 3
 
 s = 'python is pythonic'
 print(s.count('python')) # 2
-
+***
 We’re going to define a few useful methods for you:
-
 getNumberBetween(prompt, min, max)) repeatedly asks the user for a number between min and max with the prompt prompt
-
 spinWheel() simulates spinning the wheel and returns a dictionary with a random prize
-
 getRandomCategoryAndPhrase() returns a tuple with a random category and phrase for players to guess
-
 obscurePhrase(phrase, guessed) returns a tuple with a random category and phrase for players to guess
-
 Take some time to read their implementations below.
-
+***
 import json
 import random
 import time
@@ -187,37 +178,24 @@ print("In 2 seconds, will run getNumberBetween('Testing getNumberBetween(). Ente
 time.sleep(2)
 
 print(getNumberBetween('Testing getNumberBetween(). Enter a number between 1 and 10', 1, 10))
+***
 
-
-Part A: WOFPlayer
-
+### Part A: WOFPlayer
 We’re going to start by defining a class to represent a Wheel of Fortune player, called WOFPlayer. Every instance of WOFPlayer has three instance variables:
-
 .name: The name of the player (should be passed into the constructor)
-
 .prizeMoney: The amount of prize money for this player (an integer, initialized to 0)
-
 .prizes: The prizes this player has won so far (a list, initialized to [])
-
 Of these instance variables, only name should be passed into the constructor.
-
 It should also have the following methods (note: we will exclude self in our descriptions):
-
 .addMoney(amt): Add amt to self.prizeMoney
-
 .goBankrupt(): Set self.prizeMoney to 0
-
 .addPrize(prize): Append prize to self.prizes
-
 .__str__(): Returns the player’s name and prize money in the following format:
 Steve ($1800) (for a player with instance variables .name == 'Steve' and prizeMoney == 1800)
 
-Part B: WOFHumanPlayer
-
+### Part B: WOFHumanPlayer
 Next, we’re going to define a class named WOFHumanPlayer, which should inherit from WOFPlayer (part A). This class is going to represent a human player. In addition to having all of the instance variables and methods that WOFPlayer has, WOFHumanPlayer should have an additional method:
-
 .getMove(category, obscuredPhrase, guessed): Should ask the user to enter a move (using input()) and return whatever string they entered.
-
 .getMove()’s prompt should be:
 
 {name} has ${prizeMoney}
